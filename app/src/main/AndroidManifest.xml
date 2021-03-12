@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="edu.coe.hughes.simplewidget">
+    package="edu.coe.richmond.textwidget">
+    <uses-permission android:name="android.permission.SEND_SMS"/>
 
     <application
         android:allowBackup="true"
@@ -10,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SimpleWidget">
 
-        <receiver android:name=".RandomWidget"
+        <receiver android:name="edu.coe.richmond.textwidget.RandomWidget"
             android:label="@string/widget_name">
             <intent-filter>
                 <action android:name=
@@ -21,7 +22,7 @@
         </receiver>
 
 
-        <activity android:name=".WidgetConfigure">
+        <activity android:name="edu.coe.richmond.textwidget.WidgetConfigure">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
